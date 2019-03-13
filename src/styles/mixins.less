@@ -1,0 +1,36 @@
+// 元素尺寸 指指定一个值时表示正方形 
+.m-size(@width, @height: @width) {
+    width: @width;
+    height: @height;
+}
+
+.m-flex-dir(@dir: column) {
+	display: flex;
+	flex-direction: @dir;
+}   
+
+.m-flex-justify(@justify: space-between) {
+	display: flex;
+	justify-content: @justify;
+}
+
+.m-flex-align(@align: center) {
+	display: flex;
+	align-items: @align;
+}
+
+.m-flex-justify-align(@align: center) {
+	display: flex;
+	align-items: @align;
+}
+
+.m-bg-cover(@url) {
+    background-image: url(@url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.m-bg-full-width(@url) {
+    .m-bg-cover(@url);
+    background-size: 100%;
+}

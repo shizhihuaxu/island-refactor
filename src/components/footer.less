@@ -1,0 +1,23 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+@import '../styles/reset';
+
+.footer-nav {
+	color: @footer-color;
+	.m-flex-justify(flex-start);
+}
+
+.footer-logo {
+    .m-size(100px, 50px);
+    .m-bg-full-width("@{img-url}/common/foot-logo.png");
+}
+.footer-info {
+	padding-left: 40px;
+
+	span { line-height: 26px;}
+
+	a { 
+		padding-right: 10px;
+		color: @footer-color;
+	}
+}
