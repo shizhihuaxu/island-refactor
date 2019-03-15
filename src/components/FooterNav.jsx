@@ -5,6 +5,24 @@ import './footer.less'
 const { Footer } = Layout
 
 class FooterNav extends React.Component {
+	constructor() {
+		super()
+
+		this.state = {
+			navList: [{
+				link: '/',
+				text: '关于我们'
+			},{
+				link: '/',
+				text: '友情链接'
+			},
+			{
+				link: '/',
+				text: '意见反馈'
+			}]
+		}
+	}
+
 	render() {
 		return (
 			<Footer className='footer-nav'>
@@ -13,11 +31,9 @@ class FooterNav extends React.Component {
 				</div>
 				<div className='footer-info'>
 					<span>
-						<a href='' target="_blank">关于我们</a> 
-						<a href='' target="_blank">友情链接</a> 
-						<a href='' target="_blank">片刻帮助</a> 
-						<a href="" target="_blank">意见反馈</a> 
-						<a href='' target="_blank">成长记忆</a>
+						{this.state.navList.map((nav,index) =>
+							<a href={nav.link} target='_blank' key={index}>{nav.text}</a>
+				      	)}
 						<br/>
 					</span>
 					<span>All rights reserved </span>

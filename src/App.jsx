@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Layout, Menu, Icon } from 'antd'
+import { Layout } from 'antd'
 import HeaderNav from './components/HeaderNav'
 import FooterNav from './components/FooterNav'
 
 const {
-    Footer,
     Content,
 } = Layout
 
