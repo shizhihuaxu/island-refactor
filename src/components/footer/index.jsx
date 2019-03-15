@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Layout } from 'antd'
-import './footer.less'
+import './index.less'
 
 const { Footer } = Layout
 
@@ -32,7 +32,10 @@ class FooterNav extends React.Component {
 				<div className='footer-info'>
 					<span>
 						{this.state.navList.map((nav,index) =>
-							<a href={nav.link} target='_blank' key={index}>{nav.text}</a>
+							<a 	href={nav.link} 
+								key={index}
+								target='_blank' 
+								rel='noopener noreferrer'>{nav.text}</a>
 				      	)}
 						<br/>
 					</span>

@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
-import { Layout, Menu, Icon } from 'antd'
-import './header.less'
+import React from 'react'
+import { Layout, Menu } from 'antd'
+import './index.less'
 
 const { Header } = Layout
-const { SubMenu, ItemGroup } = Menu
 
 class HeaderNav extends React.Component{
     constructor() {
@@ -32,7 +31,7 @@ class HeaderNav extends React.Component{
 
     handleClick = (e) => {
         this.setState({
-            current: e.key,  // 为什么获取不到
+            current: e.key,  
         });
     }
 

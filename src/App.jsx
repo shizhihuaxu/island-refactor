@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Layout } from 'antd'
-import HeaderNav from './components/HeaderNav'
-import FooterNav from './components/FooterNav'
+import HeaderNav from '@/components/header/index'
+import FooterNav from '@/components/footer/index'
 
-const {
-    Content,
-} = Layout
+const { Content } = Layout
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <div className='App'>

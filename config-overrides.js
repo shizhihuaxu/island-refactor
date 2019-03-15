@@ -1,12 +1,23 @@
 // 用于修改create-react-app默认配置
-const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+const path = require('path');
+const { 
+    override, 
+    disableEsLint,
+    fixBabelImports, 
+    addWebpackAlias, 
+    addLessLoader 
+} = require('customize-cra');
 
 module.exports = override(
+    disableEsLint(),
     fixBabelImports('import', {
         libraryName: 'antd',
         libraryDirectory: 'es',
         style: 'css',
         style: true,
+    }),
+    addWebpackAlias({
+        ['@']: path.resolve(__dirname, 'src'),
     }),
     addLessLoader({
         javascriptEnabled: true,
