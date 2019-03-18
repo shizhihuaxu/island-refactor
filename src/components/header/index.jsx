@@ -1,10 +1,11 @@
 import React from 'react'
 import { Layout, Menu } from 'antd'
+import { Link } from 'react-router-dom'
 import './index.less'
 
-const { Header } = Layout
+const { Header:LayoutHeader } = Layout
 
-class HeaderNav extends React.Component{
+class Header extends React.Component{
     constructor() {
     	super()
 
@@ -12,12 +13,15 @@ class HeaderNav extends React.Component{
             current: 'index',
             navList:[{
                 key: 'index',
+                link: '/',
                 name: '首页'
             },{
                 key: 'read',
+                link: '/read',
                 name: '阅读'
             },{
                 key: 'mood',
+                link: '/mood',
                 name: '碎片'
             }]
         }
@@ -37,9 +41,9 @@ class HeaderNav extends React.Component{
 
     render() {
         return (
-            <Header className='header-nav'>
+            <LayoutHeader className='header-nav'>
             	<div className='header-logo'>
-            		<a href='javascript:void(0)'></a>
+            		<Link to='/'/>
             	</div>
 	            <Menu
 				        mode='horizontal'
@@ -49,13 +53,15 @@ class HeaderNav extends React.Component{
 				      >
 				    {this.state.navList.map((nav) =>
 				    	<Menu.Item key={nav.key}>
-			          	{nav.name}
+                            <Link to={nav.link}>
+			          	      {nav.name}
+                            </Link>
 			        	</Menu.Item>
 			      	)}
 			    </Menu>
-		    </Header>
+		    </LayoutHeader>
         );
     }
 }
 
-export default HeaderNav
+export default Header

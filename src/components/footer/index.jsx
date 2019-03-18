@@ -2,15 +2,15 @@ import React from 'react'
 import { Layout } from 'antd'
 import './index.less'
 
-const { Footer } = Layout
+const { Footer:LayoutFooter } = Layout
 
-class FooterNav extends React.Component {
+class Footer extends React.Component {
 	constructor() {
 		super()
 
 		this.state = {
 			navList: [{
-				link: '/',
+				link: '/about',
 				text: '关于我们'
 			},{
 				link: '/',
@@ -25,7 +25,7 @@ class FooterNav extends React.Component {
 
 	render() {
 		return (
-			<Footer className='footer-nav'>
+			<LayoutFooter className='footer-nav'>
 				<div className='footer-logo'>
 					<a href='javascript:void(0)'></a>
 				</div>
@@ -41,9 +41,9 @@ class FooterNav extends React.Component {
 					</span>
 					<span>All rights reserved </span>
 				</div>
-			</Footer>
+			</LayoutFooter>
 		)
 	}
 }
 
-export default FooterNav
+export default Footer
