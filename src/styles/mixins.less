@@ -4,6 +4,11 @@
     height: @height;
 }
 
+.m-lh(@height, @line-height: @height) {
+	height: @height;
+	line-height: @line-height;
+}
+
 .m-flex-dir(@dir: column) {
 	display: flex;
 	flex-direction: @dir;
@@ -33,4 +38,9 @@
 .m-bg-full-width(@url) {
     .m-bg-cover(@url);
     background-size: 100%;
+}
+
+.m-fsc(@size: 14px; @color:#333) {
+	font-size: @size;
+	color: @color;
 }

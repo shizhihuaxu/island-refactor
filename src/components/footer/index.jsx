@@ -5,22 +5,18 @@ import './index.less'
 const { Footer:LayoutFooter } = Layout
 
 class Footer extends React.Component {
-	constructor() {
-		super()
-
-		this.state = {
-			navList: [{
-				link: '/about',
-				text: '关于我们'
-			},{
-				link: '/',
-				text: '友情链接'
-			},
-			{
-				link: '/',
-				text: '意见反馈'
-			}]
-		}
+	state = {
+		navList: [{
+			link: '/about',
+			text: '关于我们'
+		},{
+			link: '/',
+			text: '友情链接'
+		},
+		{
+			link: '/',
+			text: '意见反馈'
+		}]
 	}
 
 	render() {

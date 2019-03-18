@@ -1,9 +1,12 @@
 import React from 'react'
+import ArticleCard from '@/components/article-card'
 
 class Read extends React.Component {
 	render() {
 		return (
-			<div>这是阅读页</div>
+			<div className='index-content'>
+				<ArticleCard></ArticleCard>
+			</div>
 		)
 	}
 }

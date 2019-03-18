@@ -21,7 +21,7 @@ class App extends React.Component {
             <Router>
             	<Layout>
       				<Header></Header>
-      				<Content>
+      				<Content className='container'>
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/read" component={Read} />

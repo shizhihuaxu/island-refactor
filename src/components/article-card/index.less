@@ -1,0 +1,56 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+.article-cpt .ant-card-body {
+	padding: 0;
+	.m-size(100%, 216px);
+	.m-flex-justify();
+}
+.article-info {
+	flex: 1;
+	padding: 20px 0 20px 20px;  
+}
+.article-title,
+.article-author {
+	font-weight: 200;
+}
+.article-title a{
+	.m-fsc(@caption-font-size);
+}
+.article-author a{
+	.m-fsc(@tips-font-size);
+}
+.article-content {
+	height: 110px;
+	overflow: hidden;
+	padding-top: 25px;
+    font-weight: 100;
+
+    &:before {
+    	content: '';
+	    position: absolute;
+	    margin-top: -10px;
+	    border-top: 1px solid #333;
+	    .m-size(30px, 1px);
+    }
+}
+.view-all {
+	padding-left: 10px;
+
+	&:after {
+		content: '';
+		margin-left: 4px;
+		display: inline-block;
+		border: 5px solid transparent;
+		border-left-color: @primary-color;
+		.m-size(0);
+	}
+}
+.article-others {
+	.m-fsc(@tips-font-size,@auxiliary-font-color)
+}
+.article-img {
+	width: 300px;
+	height: 100%;
+	.m-bg-full-width("@{img-url}/read/card-bg.jpg");
+}
