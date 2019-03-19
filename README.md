@@ -80,3 +80,22 @@
 
 1. 在React 与 TypeScript的结合过程中遇到一些问题，TypeScript 的类和泛型在React中该定义为什么样的类型模糊不清
 
+2. 在组件中引入本地图片可行的方案有
+
+   ```react
+   方法一：
+   
+   import logo from '@/imgs/logo.png'
+   
+   <img src={logo} alt='logo' />
+   
+   
+   方法二：
+   
+   <img src={require('../../imgs/logo.png)} alt='logo' />
+   ```
+
+   
+
+3. 
+

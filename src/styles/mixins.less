@@ -24,8 +24,9 @@
 	align-items: @align;
 }
 
-.m-flex-justify-align(@align: center) {
+.m-flex-justify-align(@justify: space-between,@align: center) {
 	display: flex;
+	justify-content: @justify;
 	align-items: @align;
 }
 

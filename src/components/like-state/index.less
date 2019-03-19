@@ -1,0 +1,16 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+.like-state {
+	cursor: pointer;
+	line-height: 22px;
+	.m-size(24px,22px);
+
+	&.like {
+		.m-bg-cover("@{img-url}/common/like.png");
+	}
+	&.liked,
+	&:hover {
+		.m-bg-cover("@{img-url}/common/likeH.png");
+	}
+}

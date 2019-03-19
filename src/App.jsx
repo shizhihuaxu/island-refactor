@@ -6,12 +6,12 @@ import {
     Route, 
     Link
 } from 'react-router-dom'
-import Header from '@/components/header/index'
-import Footer from '@/components/footer/index'
-import Home from '@/pages/home/index'
-import Read from '@/pages/read/index'
-import Mood from '@/pages/mood/index'
-import NoMatch from '@/pages/error/index'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+import Home from '@/pages/home'
+import Read from '@/pages/read'
+import Mood from '@/pages/mood'
+import NoMatch from '@/pages/error'
 
 const { Content } = Layout
 
