@@ -17,13 +17,17 @@ class Mood extends React.Component {
 		]
 	}
 
+	componentWillMount() {
+		// fetch data
+	}
+
 	render() {
 		let { moodList } = this.state
 
 		return (
-			<div>
-				{moodList.map((item,key) => 
-					<MoodCard 	key={key}
+			<div className='mood-list'>
+				{moodList.map((item) => 
+					<MoodCard 	key={item.mood_id}
 								moodInfo={item}></MoodCard>
 				)}
 			</div>

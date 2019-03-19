@@ -7,6 +7,11 @@ import './index.less'
 const { Meta } = Card
 
 class MoodCard extends React.Component {
+	// 更新点赞状态
+	updateLikeState() {
+
+	}
+
 	render() {
 		const { moodInfo } = this.props
 
@@ -20,7 +25,7 @@ class MoodCard extends React.Component {
 			>
 			    <Meta 
 			    	description={
-			    		<div>
+			    		<React.Fragment>
 			    			<div className='mood-content'>{moodInfo.content}</div>
 			    			<div className='user-info'>
 								<Link to={`/user/:${moodInfo.user_id}`}>
@@ -29,7 +34,7 @@ class MoodCard extends React.Component {
 								</Link>
 								<LikeState isLike={moodInfo.isLike}></LikeState>
 							</div>
-			    		</div> 
+			    		</React.Fragment>
 			    	}/>
 			</Card>
 		)
