@@ -6,12 +6,10 @@ import {
     Route, 
     Link
 } from 'react-router-dom'
-import Header from '@/components/header/index'
-import Footer from '@/components/footer/index'
-import Home from '@/pages/home/index'
-import Read from '@/pages/read/index'
-import Mood from '@/pages/mood/index'
-import NoMatch from '@/pages/error/index'
+import routes from '@/router/index'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+import NoMatch from '@/pages/error'
 
 const { Content } = Layout
 
@@ -20,16 +18,21 @@ class App extends React.Component {
         return (
             <Router>
             	<Layout>
-      				<Header></Header>
-      				<Content>
+      				<Header/>
+      				<Content className='container'>
                         <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/read" component={Read} />
-                            <Route path="/mood" component={Mood} /> 
+                            {routes.map((route, index) => (
+                                <Route
+                                  key={index}
+                                  path={route.path}
+                                  exact={route.exact}
+                                  component={route.component}
+                                />
+                            ))}
                             <Route component={NoMatch} />
                         </Switch>       
                     </Content>
-      				<Footer></Footer>
+      				<Footer/>
     			</Layout>
       		</Router>
         );

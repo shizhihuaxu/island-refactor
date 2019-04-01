@@ -4,6 +4,11 @@
     height: @height;
 }
 
+.m-lh(@height, @line-height: @height) {
+	height: @height;
+	line-height: @line-height;
+}
+
 .m-flex-dir(@dir: column) {
 	display: flex;
 	flex-direction: @dir;
@@ -19,8 +24,9 @@
 	align-items: @align;
 }
 
-.m-flex-justify-align(@align: center) {
+.m-flex-justify-align(@justify: space-between,@align: center) {
 	display: flex;
+	justify-content: @justify;
 	align-items: @align;
 }
 
@@ -33,4 +39,9 @@
 .m-bg-full-width(@url) {
     .m-bg-cover(@url);
     background-size: 100%;
+}
+
+.m-fsc(@size: 14px; @color:#333) {
+	font-size: @size;
+	color: @color;
 }

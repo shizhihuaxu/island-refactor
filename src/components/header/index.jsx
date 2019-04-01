@@ -6,27 +6,22 @@ import './index.less'
 const { Header:LayoutHeader } = Layout
 
 class Header extends React.Component{
-    constructor() {
-    	super()
-
-        this.state = {
-            current: 'index',
-            navList:[{
-                key: 'index',
-                link: '/',
-                name: '首页'
-            },{
-                key: 'read',
-                link: '/read',
-                name: '阅读'
-            },{
-                key: 'mood',
-                link: '/mood',
-                name: '碎片'
-            }]
-        }
-
-	    this.handleClick = this.handleClick.bind(this)
+    // 实例属性的新写法 
+    state = {
+        current: 'index',
+        navList:[{
+            key: 'index',
+            link: '/',
+            name: '首页'
+        },{
+            key: 'read',
+            link: '/read',
+            name: '阅读'
+        },{
+            key: 'mood',
+            link: '/mood',
+            name: '碎片'
+        }]
     }
 
     componentWillMount() {
@@ -40,6 +35,8 @@ class Header extends React.Component{
     }
 
     render() {
+        let { current,navList } = this.state
+        
         return (
             <LayoutHeader className='header-nav'>
             	<div className='header-logo'>
@@ -49,9 +46,9 @@ class Header extends React.Component{
 				        mode='horizontal'
                         className='header-menu'
                         onClick={this.handleClick}
-				        selectedKeys={[this.state.current]}
+				        selectedKeys={[current]}
 				      >
-				    {this.state.navList.map((nav) =>
+				    {navList.map((nav) =>
 				    	<Menu.Item key={nav.key}>
                             <Link to={nav.link}>
 			          	      {nav.name}
