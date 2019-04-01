@@ -2,7 +2,7 @@ import React from 'react'
 
 class MoodDetail extends React.Component {
 	render() {
-		return ()
+		return (<div>碎片详情页</div>)
 	}
 }
 

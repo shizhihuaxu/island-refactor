@@ -3,7 +3,7 @@
  *  @desc 生成 API 接口
  */
 import $axios from './axios'
-import STATIC from '@/utils/constant'
+import STATIC from '@/scripts/constant'
 
 /**
  * @method getArticleList

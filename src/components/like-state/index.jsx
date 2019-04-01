@@ -4,11 +4,11 @@ import './index.less'
 class LikeState extends React.Component {
 	// 点赞
 	like = () => {
-		
+		this.props.onStateChange(true)
 	}
 	// 取消赞
 	unlike = () => {
-		
+		this.props.onStateChange(false)
 	}
 
 	render() {

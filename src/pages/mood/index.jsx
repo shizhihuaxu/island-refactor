@@ -28,7 +28,7 @@ class Mood extends React.Component {
 			<div className='mood-list'>
 				{moodList.map((item) => 
 					<MoodCard 	key={item.mood_id}
-								moodInfo={item}></MoodCard>
+								moodInfo={item}/>
 				)}
 			</div>
 		)

@@ -8,8 +8,9 @@ const { Meta } = Card
 
 class MoodCard extends React.Component {
 	// 更新点赞状态
-	updateLikeState() {
-
+	updateLikeState = (state) => {
+		// ajax update state
+		console.log(state)
 	}
 
 	render() {
@@ -32,7 +33,8 @@ class MoodCard extends React.Component {
 									<Avatar src={moodInfo.avatar}/>
 									<span className='nickname'>{moodInfo.nickname}</span>
 								</Link>
-								<LikeState isLike={moodInfo.isLike}></LikeState>
+								<LikeState  isLike={moodInfo.isLike}
+											onStateChange={this.updateLikeState}></LikeState>
 							</div>
 			    		</React.Fragment>
 			    	}/>
