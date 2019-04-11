@@ -2,26 +2,27 @@ import React from 'react'
 import { Layout } from 'antd'
 import './index.less'
 
-const { Footer:LayoutFooter } = Layout
+const { Footer: LayoutFooter } = Layout
 
 class Footer extends React.Component {
-	state = {
-		navList: [{
-			link: '/about',
-			text: '关于我们'
-		},{
-			link: '/',
-			text: '友情链接'
-		},
-		{
-			link: '/',
-			text: '意见反馈'
-		}]
-	}
+    readonly state = {
+        navList: [{
+                link: '/about',
+                text: '关于我们'
+            }, {
+                link: '/',
+                text: '友情链接'
+            },
+            {
+                link: '/',
+                text: '意见反馈'
+            }
+        ]
+    }
 
-	render() {
-		return (
-			<LayoutFooter className='footer-nav'>
+    render() {
+        return (
+            <LayoutFooter className='footer-nav'>
 				<div className='footer-logo'>
 					<a href='javascript:void(0)'></a>
 				</div>
@@ -38,8 +39,8 @@ class Footer extends React.Component {
 					<span>All rights reserved </span>
 				</div>
 			</LayoutFooter>
-		)
-	}
+        )
+    }
 }
 
 export default Footer

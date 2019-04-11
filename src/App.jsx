@@ -1,9 +1,9 @@
 import React from 'react'
 import { Layout } from 'antd'
-import { 
-    BrowserRouter as Router, 
+import {
+    BrowserRouter as Router,
     Switch,
-    Route, 
+    Route,
     Link
 } from 'react-router-dom'
 import routes from '@/router/index'
@@ -17,9 +17,9 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-            	<Layout>
-      				<Header/>
-      				<Content className='container'>
+                <Layout>
+                    <Header/>
+                    <Content className='container'>
                         <Switch>
                             {routes.map((route, index) => (
                                 <Route
@@ -32,9 +32,9 @@ class App extends React.Component {
                             <Route component={NoMatch} />
                         </Switch>       
                     </Content>
-      				<Footer/>
-    			</Layout>
-      		</Router>
+                    <Footer/>
+                </Layout>
+            </Router>
         );
     }
 }

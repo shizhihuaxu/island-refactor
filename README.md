@@ -1,3 +1,7 @@
+
+
+[TOC]
+
 ## 技术选型
 
 **前端**：
@@ -111,7 +115,14 @@ UI 库:    Ant-Design 3.15.0
    configure({ adapter: new Adapter() })
    ```
 
+6.  TypeScript 支持
 
+   ```
+   cnpm install --save @types/react @types/react-dom @types/react-router-dom
+   cnpm install -D awesome-typescript-loader source-map-loader
+   ```
+
+   
 
 ## 过程中遇到的问题及解决方案
 
@@ -134,9 +145,32 @@ UI 库:    Ant-Design 3.15.0
 
    
 
-3. 
+3. tsx 文件引入时没有扩展名会提示找不到文件
+
+   解决办法：在 webpack  resolve : {extentions: ['tsx']} 添加 tsx 扩展名
+
+4. tsx 文件使用路径别名引入文件，提示文件不存在
+
+   解决办法：在tsconfig 中加入路径别名
+
+   ```json
+   "compilerOptions": {
+       .....
+       "paths":{
+   		"@/*": ["src/*"]
+   	}
+   }
+   ```
+
+   
+
+5. react 组件加入 TypeScript 后事件类型如何定义？ props 传递的是一个方法，如何定义props 类型？
 
 ## to-do list
 
 - [ ] 写一个后端的API及API使用demo
 - [ ] 加入TypeScript
+
+## 总结
+
+使用 create-react-app 这个脚手架来构建项目最好 eject ，否则修改一些配置不是很方便，

@@ -6,25 +6,36 @@ import './index.less'
 
 const { Meta } = Card
 
-class MoodCard extends React.Component {
-	// 更新点赞状态
-	updateLikeState = (state) => {
-		// ajax update state
-		console.log(state)
-	}
+interface MoodCardProps {
+    moodInfo: {
+        img: '',
+        content: '',
+        user_id: '',
+        avatar: '',
+        nickname: '',
+        isLike: false,
+    }
+}
 
-	render() {
-		const { moodInfo } = this.props
+class MoodCard extends React.Component < MoodCardProps, {} > {
+        // 更新点赞状态
+        updateLikeState = (status: boolean) => {
+            // ajax update state
+            console.log(status)
+        }
 
-		return (
-			<Card
+        render() {
+            const { moodInfo } = this.props
+
+            return (
+                    <Card
 				className='mood-card'
-				hoverable='true'
+				hoverable={true}
 			    style={{ width: 285}}
 			    bodyStyle={{ padding: 0}}
-			    cover={<img alt='' src={moodInfo.img}/>}
-			>
-			    <Meta 
+			    cover={<img alt='' src={moodInfo.img}/>
+                } >
+                <Meta 
 			    	description={
 			    		<React.Fragment>
 			    			<div className='mood-content'>{moodInfo.content}</div>

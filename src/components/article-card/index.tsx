@@ -3,12 +3,24 @@ import { Card } from 'antd'
 import { Link } from 'react-router-dom'
 import './index.less'
 
-class ArticleCard extends React.Component {
-	render() {
-		const { articleInfo } = this.props
+interface ArticlecardProps {
+    articleInfo: {
+        article_id: 1,
+        title: '',
+        user_id: 1,
+        author: '',
+        expert: '',
+        skip_num: 0,
+        comment_num: 0,
+        like_num: 0
+    }
+}
+class ArticleCard extends React.Component < ArticlecardProps, {} > {
+    render() {
+        const { articleInfo } = this.props
 
-		return (
-			<Card  className='article-cpt'>
+        return (
+            <Card  className='article-cpt'>
 				<div className='article-info'>
 					<div className='article-info-box'>
 						<div className='article-title'>
@@ -32,8 +44,8 @@ class ArticleCard extends React.Component {
 					<Link to={`/articleDetail/${articleInfo.article_id}`}></Link>
 				</div>
 			</Card>
-		)
-	}
+        )
+    }
 }
 
 export default ArticleCard
