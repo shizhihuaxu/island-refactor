@@ -3,7 +3,7 @@ import './index.less'
 
 interface LikeStateProps {
     isLike: boolean;
-    onStateChange: any;
+    onStateChange: (status: boolean) => void;
 }
 class LikeState extends React.Component < LikeStateProps, {} > {
     // 点赞

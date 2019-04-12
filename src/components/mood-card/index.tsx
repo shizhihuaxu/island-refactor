@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Icon, Avatar } from 'antd'
-import LikeState from '@/components/like-state'
+import LikeState from '../like-state'
 import './index.less'
 
 const { Meta } = Card

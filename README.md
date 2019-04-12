@@ -155,9 +155,9 @@ UI 库:    Ant-Design 3.15.0
 
    ```json
    "compilerOptions": {
-       .....
+       "baseUrl": "./",
        "paths":{
-   		"@/*": ["src/*"]
+   		"@/*": ["./src/*"]
    	}
    }
    ```
@@ -173,4 +173,4 @@ UI 库:    Ant-Design 3.15.0
 
 ## 总结
 
-使用 create-react-app 这个脚手架来构建项目最好 eject ，否则修改一些配置不是很方便，
+使用 create-react-app 这个脚手架来构建项目最好 eject ，否则修改一些配置不是很方便。

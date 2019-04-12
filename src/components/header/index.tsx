@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MouseEvent } from 'react'
 import { Layout, Menu } from 'antd'
 import { Link } from 'react-router-dom'
 import './index.less'
@@ -28,7 +28,7 @@ class Header extends React.Component {
         // ajax fetch data
     }
 
-    handleClick = (e: any) => {
+    handleClick = (e) => {
         this.setState({
             current: e.key,
         });
