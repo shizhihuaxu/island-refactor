@@ -22,8 +22,7 @@ class MoodCard extends React.Component {
 				hoverable='true'
 			    style={{ width: 285}}
 			    bodyStyle={{ padding: 0}}
-			    cover={<img alt='' src={moodInfo.img}/>}
-			>
+			    cover={<img alt='' src={moodInfo.img}/>}>
 			    <Meta 
 			    	description={
 			    		<React.Fragment>
