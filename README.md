@@ -135,8 +135,3 @@ UI 库:    Ant-Design 3.15.0
    
 
 3. 
-
-## to-do list
-
-- [ ] 写一个后端的API及API使用demo
-- [ ] 加入TypeScript
