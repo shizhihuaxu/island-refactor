@@ -7,11 +7,9 @@ class Read extends React.Component {
 		articleList: []
 	}
 	componentDidMount() {
-		let _self = this 
-
-		getArticleList().then(function(res) {
+		getArticleList().then((res) => {
 			if(res.status === 200) {
-				_self.setState({ articleList: res.data})
+				this.setState({ articleList: res.data})
 			}
 		})
 	}	
