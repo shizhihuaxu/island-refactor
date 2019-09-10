@@ -1,21 +1,18 @@
 import React from 'react'
 import ArticleCard from '@/components/article-card'
+import { getArticleList } from '@/api/index.js'
 
 class Read extends React.Component {
 	state = {
-		articleList: [
-			{
-				article_id: 1,
-				title: '文章名',
-				user_id: 1,
-				author: '张三',
-				expert: '内容摘要',
-				skip_num: 100,
-				comment_num: 40,
-				like_num: 50,
-			}
-		]
+		articleList: []
 	}
+	componentDidMount() {
+		getArticleList().then((res) => {
+			if(res.status === 200) {
+				this.setState({ articleList: res.data})
+			}
+		})
+	}	
 	render() {
 		let { articleList } = this.state
 

@@ -10,7 +10,7 @@ import STATIC from '@/scripts/constant'
  * @desc 获取文章列表
  * @returns {Promise} 响应结果
  */
-const getArticleList = () => {
+export const getArticleList = () => {
 	return $axios({
 		url: STATIC.API.ARTICLE_LIST,
 		method: 'GET',
@@ -22,14 +22,9 @@ const getArticleList = () => {
  * @desc 获取碎片列表
  * @returns {Promise} 响应结果
  */
-const getMoodList = () => {
+export const getMoodList = () => {
 	return $axios({
 		url: STATIC.API.MOOD_LIST,
 		method: 'GET'
 	})
-}
-
-export default {
-	getArticleList,
-	getMoodList
 }
